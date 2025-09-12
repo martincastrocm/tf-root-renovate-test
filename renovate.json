@@ -1,22 +1,10 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "schedule": ["at any time"],
-  "prHourlyLimit": 100,
-  "prConcurrentLimit": 0,
   "terraform": {
     "enabled": true
   },
-  "recreateClosed": true,
-  "automerge": true,
-  "platformAutomerge": true,
-  "automergeType": "pr",
   "packageRules": [
-    {
-      "groupName": "all-updates",
-      "separateMajorMinor": false,
-      "separateMinorPatch": false
-    },
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["github-tags"],
