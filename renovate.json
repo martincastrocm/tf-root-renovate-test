@@ -17,7 +17,7 @@
       "labels": ["terraform", "providers"],
       "additionalBranchPrefix": "tf-providers-",
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["provider"],
+      "matchDepTypes": ["required_provider"],
       "matchDatasources": ["terraform-provider"]
     },
     {
