@@ -14,7 +14,7 @@
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["hashicorp/azurerm"],
-      "allowedVersions": "~> 4.24.0",
+      "allowedVersions": "~> 4.31.0",
       "enabled": true
     }
   ],
