@@ -63,7 +63,7 @@
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["azapi"],
+      "matchPackageNames": ["azure/azapi"],
       "allowedVersions": "~> 3.0.0",
       "enabled": true,
       "groupName": "Terraform providers"
