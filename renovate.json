@@ -13,7 +13,7 @@
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["azurerm"],
+      "matchPackageNames": ["hashicorp/azurerm"],
       "allowedVersions": "~> 4.24.0",
       "enabled": true
     }
