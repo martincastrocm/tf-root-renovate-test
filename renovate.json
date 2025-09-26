@@ -38,6 +38,14 @@
       "groupName": "Terraform modules"
     },
     {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-module"],
+      "matchPackageNames": ["Azure/avm-utl-regions/azurerm"],
+      "allowedVersions": "0.6.0",
+      "enabled": true,
+      "groupName": "Terraform modules"
+    },
+    {
       "matchManagers": ["terraform-version"],
       "matchDepNames": ["hashicorp/terraform"],
       "matchDatasources": ["terraform-version"],
@@ -50,6 +58,14 @@
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["hashicorp/azurerm"],
       "allowedVersions": "~> 4.31.0",
+      "enabled": true,
+      "groupName": "Terraform providers"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
+      "matchPackageNames": ["azapi"],
+      "allowedVersions": "~> 3.0.0",
       "enabled": true,
       "groupName": "Terraform providers"
     }
