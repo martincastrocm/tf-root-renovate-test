@@ -5,7 +5,7 @@
     {
       "matchDatasources": ["github-tags"],
       "matchPackageNames": ["github.com/martincastrocm/tf-module-renovate-test"],
-      "allowedVersions": "0.2.0",
+      "allowedVersions": "v0.2.0",
       "versioning": "semver",
       "enabled": true
     }
