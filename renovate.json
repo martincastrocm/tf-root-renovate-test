@@ -21,13 +21,6 @@
       "matchDatasources": ["terraform-provider"]
     },
     {
-      "groupName": "Terraform version",
-      "labels": ["terraform", "required-version"],
-      "additionalBranchPrefix": "tf-version-",
-      "matchManagers": ["terraform-version"],
-      "matchDepTypes": ["required_version"]
-    },
-    {
       "matchManagers": ["terraform"],
       "matchDatasources": ["github-tags"],
       "matchPackageNames": ["martincastrocm/tf-module-renovate-test"],
@@ -50,7 +43,9 @@
       "matchDatasources": ["terraform-version"],
       "allowedVersions": "~> 1.13.0",
       "enabled": true,
-      "groupName": "Terraform version"
+      "labels": ["terraform", "required-version"],
+      "additionalBranchPrefix": "tf-version-",
+      "matchDepTypes": ["required_version"]
     },
     {
       "matchManagers": ["terraform"],
