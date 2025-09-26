@@ -24,7 +24,8 @@
       "groupName": "Terraform version",
       "labels": ["terraform", "required-version"],
       "additionalBranchPrefix": "tf-version-",
-      "matchManagers": ["terraform-version"]
+      "matchManagers": ["terraform-version"],
+      "matchDepTypes": ["required_version"]
     },
     {
       "matchManagers": ["terraform"],
@@ -62,7 +63,7 @@
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["Azure/azapi"],
+      "matchPackageNames": ["azure/azapi"],
       "allowedVersions": "~> 3.0.0",
       "enabled": true,
       "groupName": "Terraform providers"
