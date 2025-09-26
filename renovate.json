@@ -1,30 +1,57 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
+  "recreateClosed": true,
+  "dependencyDashboard": true,
+  "prHourlyLimit": 100,
+  "timeoutMinutes": 10,
   "packageRules": [
+    {
+      "groupName": "Terraform modules",
+      "labels": ["terraform", "modules"],
+      "additionalBranchPrefix": "tf-modules-",
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["module"],
+      "matchDatasources": ["terraform-module", "github-tags"]
+    },
+    {
+      "groupName": "Terraform providers",
+      "labels": ["terraform", "providers"],
+      "additionalBranchPrefix": "tf-providers-",
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["provider"],
+      "matchDatasources": ["terraform-provider"]
+    },
+    {
+      "groupName": "Terraform version",
+      "labels": ["terraform", "required-version"],
+      "additionalBranchPrefix": "tf-version-",
+      "matchManagers": ["terraform-version"]
+    },
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["github-tags"],
       "matchPackageNames": ["martincastrocm/tf-module-renovate-test"],
       "allowedVersions": "v0.2.0",
       "rangeStrategy": "pin",
-      "enabled": true
+      "enabled": true,
+      "groupName": "Terraform modules"
+    },
+    {
+      "matchManagers": ["terraform-version"],
+      "matchDepNames": ["hashicorp/terraform"],
+      "matchDatasources": ["terraform-version"],
+      "allowedVersions": "~> 1.13.0",
+      "enabled": true,
+      "groupName": "Terraform version"
     },
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["hashicorp/azurerm"],
       "allowedVersions": "~> 4.31.0",
-      "enabled": true
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDepNames": ["hashicorp/terraform"],
-      "matchDatasources": ["terraform-version"],
-      "allowedVersions": "~> 1.13.0",
-      "enabled": true
+      "enabled": true,
+      "groupName": "Terraform providers"
     }
-  ],
-  "recreateClosed": true,
-  "dependencyDashboard": true
+  ]
 }
