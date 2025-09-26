@@ -1,7 +1,6 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
-  "recreateClosed": true,
   "dependencyDashboard": true,
   "prHourlyLimit": 100,
   "packageRules": [
@@ -63,7 +62,7 @@
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["azure/azapi"],
+      "matchPackageNames": ["Azure/azapi"],
       "allowedVersions": "~> 3.0.0",
       "enabled": true,
       "groupName": "Terraform providers"
