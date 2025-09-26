@@ -16,6 +16,13 @@
       "matchPackageNames": ["hashicorp/azurerm"],
       "allowedVersions": "~> 4.31.0",
       "enabled": true
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDepNames": ["hashicorp/terraform"],
+      "matchDatasources": ["terraform-version"],
+      "allowedVersions": "~> 1.13.0",
+      "enabled": true
     }
   ],
   "recreateClosed": true,
