@@ -3,11 +3,14 @@
   "extends": ["config:recommended"],
   "packageRules": [
     {
+      "matchManagers": ["terraform"],
       "matchDatasources": ["github-tags"],
-      "matchPackageNames": ["github.com/martincastrocm/tf-module-renovate-test"],
+      "matchPackageNames": ["martincastrocm/tf-module-renovate-test"],
       "allowedVersions": "v0.2.0",
-      "versioning": "semver",
+      "rangeStrategy": "pin",
       "enabled": true
     }
-  ]
+  ],
+  "recreateClosed": true,
+  "dependencyDashboard": true
 }
