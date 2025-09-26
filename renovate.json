@@ -9,6 +9,13 @@
       "allowedVersions": "v0.2.0",
       "rangeStrategy": "pin",
       "enabled": true
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
+      "matchPackageNames": ["azurerm"],
+      "allowedVersions": "~> 4.24.0",
+      "enabled": true
     }
   ],
   "recreateClosed": true,
