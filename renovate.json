@@ -2,8 +2,41 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "dependencyDashboard": true,
+  "semanticCommits": "enabled",
+  "semanticCommitScope": "deps",
+  "schedule": ["after 5am on Monday", "after 5am on Wednesday"],
+  "timezone": "Europe/Madrid",
+  "rebaseWhen": "conflicted",
+  "minimumReleaseAge": 3,
+  "labels": ["dependencies", "renovate"],
   "prHourlyLimit": 100,
+  "enabled": false,
   "packageRules": [
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["module"],
+      "matchUpdateTypes": ["major"],
+      "semanticCommitType": "feat",
+      "semanticCommitBody": "BREAKING CHANGE: Update to {{newVersion}}.",
+      "semanticCommitScope": "deps",
+      "enabled": true
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["module"],
+      "matchUpdateTypes": ["minor"],
+      "semanticCommitType": "feat",
+      "semanticCommitScope": "deps",
+      "enabled": true
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDepTypes": ["module"],
+      "matchUpdateTypes": ["patch"],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps",
+      "enabled": true
+    },
     {
       "groupName": "Terraform modules",
       "labels": ["terraform", "modules"],
@@ -35,38 +68,6 @@
       "rangeStrategy": "pin",
       "enabled": true,
       "groupName": "Terraform modules"
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-module"],
-      "matchPackageNames": ["Azure/avm-utl-regions/azurerm"],
-      "allowedVersions": "0.6.0",
-      "enabled": true,
-      "groupName": "Terraform modules"
-    },
-    {
-      "matchManagers": ["terraform-version"],
-      "matchDepNames": ["hashicorp/terraform"],
-      "matchDatasources": ["terraform-version"],
-      "allowedVersions": "~> 1.13.0",
-      "enabled": true,
-      "groupName": "Terraform version"
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["hashicorp/azurerm"],
-      "allowedVersions": "~> 4.31.0",
-      "enabled": true,
-      "groupName": "Terraform providers"
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["Azure/azapi"],
-      "allowedVersions": "~> 2.6.0",
-      "enabled": true,
-      "groupName": "Terraform providers"
     }
   ]
 }
