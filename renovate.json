@@ -4,7 +4,7 @@
   "dependencyDashboard": true,
   "semanticCommits": "enabled",
   "semanticCommitScope": "deps",
-  "schedule": ["after 5am on Monday", "after 5am on Wednesday"],
+  "schedule": ["at any time"],
   "timezone": "Europe/Madrid",
   "rebaseWhen": "conflicted",
   "minimumReleaseAge": "3 days",
@@ -36,7 +36,7 @@
     },
     {
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["module"],
+      "matchDepTypes": ["module", "required_version", "required_provider"],
       "matchUpdateTypes": ["major"],
       "semanticCommitType": "feat",
       "commitBody": "BREAKING CHANGE: Update to {{newVersion}}.",
@@ -45,7 +45,7 @@
     },
     {
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["module"],
+      "matchDepTypes": ["module", "required_version", "required_provider"],
       "matchUpdateTypes": ["minor"],
       "semanticCommitType": "feat",
       "semanticCommitScope": "deps",
@@ -53,7 +53,7 @@
     },
     {
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["module"],
+      "matchDepTypes": ["module", "required_version", "required_provider"],
       "matchUpdateTypes": ["patch"],
       "semanticCommitType": "fix",
       "semanticCommitScope": "deps",
@@ -67,6 +67,22 @@
       "rangeStrategy": "pin",
       "enabled": true,
       "groupName": "Terraform modules"
+    },
+    {
+      "matchManagers": ["terraform-version"],
+      "matchDepNames": ["hashicorp/terraform"],
+      "matchDatasources": ["terraform-version"],
+      "allowedVersions": "~> 1.13.0",
+      "enabled": true,
+      "groupName": "Terraform version"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
+      "matchPackageNames": ["hashicorp/azurerm"],
+      "allowedVersions": "~> 4.31.0",
+      "enabled": true,
+      "groupName": "Terraform providers"
     }
   ]
 }
