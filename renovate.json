@@ -40,7 +40,7 @@
       "matchUpdateTypes": ["major"],
       "semanticCommitType": "feat",
       "commitBody": "BREAKING CHANGE: Update to {{newVersion}}.",
-      "semanticCommitScope": "deps",
+      "semanticCommitScope": "deps-major",
       "enabled": true
     },
     {
