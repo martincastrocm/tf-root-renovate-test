@@ -46,41 +46,18 @@
     },
     {
       "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-module"],
-      "matchPackageNames": ["Azure/avm-res-app-containerapp/azurerm"],
-      "allowedVersions": "0.7.1",
-      "enabled": true,
-      "groupName": "Terraform modules"
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-module"],
-      "matchPackageNames": ["Azure/avm-res-storage-storageaccount/azurerm"],
-      "allowedVersions": "0.4.0",
-      "enabled": true,
-      "groupName": "Terraform modules"
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-module"],
-      "matchPackageNames": ["Azure/avm-res-cache-redis/azurerm"],
-      "allowedVersions": "0.4.0",
-      "enabled": true,
-      "groupName": "Terraform modules"
-    },
-    {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-module"],
-      "matchPackageNames": ["Azure/avm-res-keyvault-vault/azurerm"],
-      "allowedVersions": "0.10.0",
-      "enabled": true,
-      "groupName": "Terraform modules"
-    },
-    {
-      "matchManagers": ["terraform"],
       "allowedVersions": "~> 1.13.0",
       "enabled": true,
       "groupName": "Terraform version"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["github-tags"],
+      "matchPackageNames": ["martincastrocm/tf-module-renovate-test"],
+      "allowedVersions": "v0.2.0",
+      "rangeStrategy": "pin",
+      "enabled": true,
+      "groupName": "Terraform modules"
     },
     {
       "matchManagers": ["terraform"],
