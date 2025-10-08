@@ -36,35 +36,41 @@
     },
     {
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["module", "required_version", "required_provider"],
-      "matchUpdateTypes": ["major"],
-      "semanticCommitType": "feat",
-      "commitBody": "BREAKING CHANGE: Update to {{newVersion}}.",
-      "semanticCommitScope": "deps-major",
-      "enabled": true
+      "matchDatasources": ["terraform-module"],
+      "matchPackageNames": ["Azure/avm-utl-regions/azurerm"],
+      "allowedVersions": "0.6.0",
+      "enabled": true,
+      "groupName": "Terraform modules"
     },
     {
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["module", "required_version", "required_provider"],
-      "matchUpdateTypes": ["minor"],
-      "semanticCommitType": "feat",
-      "semanticCommitScope": "deps",
-      "enabled": true
+      "matchDatasources": ["terraform-module"],
+      "matchPackageNames": ["Azure/avm-res-app-containerapp/azurerm"],
+      "allowedVersions": "0.7.1",
+      "enabled": true,
+      "groupName": "Terraform modules"
     },
     {
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["module", "required_version", "required_provider"],
-      "matchUpdateTypes": ["patch"],
-      "semanticCommitType": "fix",
-      "semanticCommitScope": "deps",
-      "enabled": true
+      "matchDatasources": ["terraform-module"],
+      "matchPackageNames": ["Azure/avm-res-storage-storageaccount/azurerm"],
+      "allowedVersions": "0.4.0",
+      "enabled": true,
+      "groupName": "Terraform modules"
     },
     {
       "matchManagers": ["terraform"],
-      "matchDatasources": ["github-tags"],
-      "matchPackageNames": ["martincastrocm/tf-module-renovate-test"],
-      "allowedVersions": "v0.2.0",
-      "rangeStrategy": "pin",
+      "matchDatasources": ["terraform-module"],
+      "matchPackageNames": ["Azure/avm-res-cache-redis/azurerm"],
+      "allowedVersions": "0.4.0",
+      "enabled": true,
+      "groupName": "Terraform modules"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-module"],
+      "matchPackageNames": ["Azure/avm-res-keyvault-vault/azurerm"],
+      "allowedVersions": "0.10.0",
       "enabled": true,
       "groupName": "Terraform modules"
     },
@@ -72,7 +78,7 @@
       "matchManagers": ["terraform-version"],
       "matchDepNames": ["hashicorp/terraform"],
       "matchDatasources": ["terraform-version"],
-      "allowedVersions": "~> 1.12.1",
+      "allowedVersions": "~> 1.13.0",
       "enabled": true,
       "groupName": "Terraform version"
     },
@@ -81,6 +87,22 @@
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["hashicorp/azurerm"],
       "allowedVersions": "~> 4.31.0",
+      "enabled": true,
+      "groupName": "Terraform providers"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
+      "matchPackageNames": ["Azure/azapi"],
+      "allowedVersions": "~> 2.6.0",
+      "enabled": true,
+      "groupName": "Terraform providers"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
+      "matchPackageNames": ["hashicorp/azuread"],
+      "allowedVersions": "~> 3.3.0",
       "enabled": true,
       "groupName": "Terraform providers"
     }
