@@ -10,9 +10,7 @@
   "labels": ["dependencies", "renovate"],
   "prHourlyLimit": 100,
   "terraform": {
-    "enabled": true,
-    "pinDigests": true,
-    "rangeStrategy": "replace"
+    "enabled": true
   },
   "packageRules": [
     {
@@ -82,7 +80,7 @@
       "matchManagers": ["terraform-version"],
       "matchDepNames": ["hashicorp/terraform"],
       "matchDatasources": ["terraform-version"],
-      "allowedVersions": ">= 1.13.0",
+      "allowedVersions": "~> 1.13.0",
       "enabled": true,
       "groupName": "Terraform version"
     },
