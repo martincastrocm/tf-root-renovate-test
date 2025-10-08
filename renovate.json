@@ -9,6 +9,11 @@
   "minimumReleaseAge": "3 days",
   "labels": ["dependencies", "renovate"],
   "prHourlyLimit": 100,
+  "terraform": {
+    "enabled": true,
+    "pinDigests": true,
+    "rangeStrategy": "widen"
+  },
   "packageRules": [
     {
       "groupName": "Terraform modules",
