@@ -13,7 +13,7 @@
   "terraform": {
     "enabled": true,
     "pinDigests": true,
-    "rangeStrategy": "widen"
+    "rangeStrategy": "replace"
   },  
   "packageRules": [
     {
