@@ -11,7 +11,8 @@
   "prHourlyLimit": 100,
   "terraform": {
     "enabled": true,
-    "pinDigests": true
+    "pinDigests": true,
+    "rangeStrategy": "replace"
   },
   "packageRules": [
     {
