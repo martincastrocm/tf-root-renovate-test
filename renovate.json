@@ -9,6 +9,7 @@
   "minimumReleaseAge": "3 days",
   "labels": ["dependencies", "renovate"],
   "prHourlyLimit": 100,
+  "recreateClosed": true,
   "terraform": {
     "enabled": true
   },
