@@ -12,8 +12,8 @@
   "recreateClosed": true,
   "terraform": {
     "enabled": true,
-    "pinDigests": false,
-    "rangeStrategy": "replace"
+    "pinDigests": true,
+    "rangeStrategy": "widen"
   },  
   "packageRules": [
     {
