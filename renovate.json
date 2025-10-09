@@ -10,6 +10,7 @@
   "labels": ["dependencies", "renovate"],
   "prHourlyLimit": 100,
   "recreateClosed": true,
+  "separateMajorMinor" : true,
   "terraform": {
     "enabled": true,
     "pinDigests": false,
