@@ -1,3 +1,4 @@
+/*
 module "common" {
   source = "git@github.com:martincastrocm/tf-module-renovate-test.git?ref=v0.1.0"
 }
@@ -23,9 +24,17 @@ terraform {
       source  = "hashicorp/random"
       version = "~> 3.6.0"
     }
-    http = {
-      source  = "hashicorp/http"
-      version = "~> 3.5.0"
+
+  }
+}
+*/
+
+terraform {
+
+  required_providers {
+    random = {
+      source  = "hashicorp/random"
+      version = "~> 3.7.2"
     }
   }
 }
