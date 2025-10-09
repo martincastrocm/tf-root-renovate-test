@@ -10,11 +10,6 @@
   "labels": ["dependencies", "renovate"],
   "prHourlyLimit": 100,
   "recreateClosed": true,
-  "terraform": {
-    "enabled": true,
-    "pinDigests": true,
-    "rangeStrategy": "replace"
-  },  
   "packageRules": [
     {
       "groupName": "Terraform modules",
@@ -49,12 +44,6 @@
     },
     {
       "matchManagers": ["terraform"],
-      "allowedVersions": "~> 1.13.0",
-      "enabled": true,
-      "groupName": "Terraform version"
-    },
-    {
-      "matchManagers": ["terraform"],
       "matchDatasources": ["github-tags"],
       "matchPackageNames": ["martincastrocm/tf-module-renovate-test"],
       "allowedVersions": "v0.2.0",
@@ -63,17 +52,18 @@
       "groupName": "Terraform modules"
     },
     {
-      "matchManagers": ["terraform"],
-      "matchDatasources": ["terraform-provider"],
-      "matchPackageNames": ["hashicorp/azurerm"],
-      "allowedVersions": "~> 4.31.0",
+      "matchManagers": ["terraform-version"],
+      "matchDepNames": ["hashicorp/terraform"],
+      "matchDatasources": ["terraform-version"],
+      "allowedVersions": "~> 1.13.0",
       "enabled": true,
-      "groupName": "Terraform providers"
+      "groupName": "Terraform version"
     },
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
-      "rangeStrategy": "auto",
+      "matchPackageNames": ["hashicorp/azurerm"],
+      "allowedVersions": "~> 4.31.0",
       "enabled": true,
       "groupName": "Terraform providers"
     },
