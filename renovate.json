@@ -88,5 +88,14 @@
       "enabled": true,
       "groupName": "Terraform providers"
     }
-  ]
+  ],
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 5am on monday"],
+    "commitMessageAction": "regenerate",
+    "commitMessageTopic": "terraform lock files",
+    "semanticCommitType": "chore",
+    "semanticCommitScope": "terraform",
+    "labels": ["dependencies", "renovate", "terraform", "lock-files"]
+  }
 }
