@@ -73,6 +73,13 @@
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
+      "rangeStrategy": "widen",
+      "enabled": true,
+      "groupName": "Terraform providers"
+    },
+    {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["Azure/azapi"],
       "allowedVersions": "~> 2.6.0",
       "enabled": true,
