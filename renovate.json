@@ -73,7 +73,7 @@
     {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
-      "rangeStrategy": "widen",
+      "rangeStrategy": "auto",
       "enabled": true,
       "groupName": "Terraform providers"
     },
