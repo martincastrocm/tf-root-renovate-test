@@ -91,7 +91,7 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
-    "schedule": ["before 5am on monday"],
+    "schedule": ["at any time"],
     "commitMessageAction": "regenerate",
     "commitMessageTopic": "terraform lock files",
     "semanticCommitType": "chore",
