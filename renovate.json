@@ -93,10 +93,11 @@
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["at any time"],
+    "additionalBranchPrefix": "tf-lock-file-maintenance-",
     "commitMessageAction": "regenerate",
     "commitMessageTopic": "terraform lock files",
     "semanticCommitType": "chore",
     "semanticCommitScope": "terraform",
-    "labels": ["dependencies", "renovate", "terraform", "lock-files"]
+    "labels": ["dependencies", "renovate", "terraform", "lock-file-maintenance"]
   }
 }
