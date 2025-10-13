@@ -65,6 +65,7 @@
       "matchDepNames": ["hashicorp/terraform"],
       "matchDatasources": ["terraform-version"],
       "allowedVersions": "~> 1.12.0",
+      "rangeStrategy": "pin",
       "enabled": true,
       "groupName": "Terraform version"
     },
