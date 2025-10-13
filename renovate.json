@@ -41,7 +41,8 @@
       "labels": ["terraform", "required-version"],
       "additionalBranchPrefix": "tf-version-",
       "matchManagers": ["terraform"],
-      "matchDepTypes": ["required_version"]
+      "matchDepTypes": ["required_version"],
+      "matchDatasources": ["github-releases"]
     },
     {
       "matchManagers": ["terraform"],
