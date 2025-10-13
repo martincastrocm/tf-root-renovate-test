@@ -13,6 +13,7 @@
   "prHourlyLimit": 100,
   "recreateClosed": true,
   "separateMajorMinor" : true,
+  "enabledManagers": ["terraform", "terraform-version"],
   "terraform": {
     "enabled": true,
     "pinDigests": false,
