@@ -63,8 +63,7 @@
     {
       "matchManagers": ["terraform-version"],
       "matchDepNames": ["hashicorp/terraform"],
-      "matchDatasources": ["terraform-version"],
-      "currentValue": "~> 1.12.0",
+      "allowedVersions": "1.12.0",
       "enabled": true,
       "groupName": "Terraform version"
     },
