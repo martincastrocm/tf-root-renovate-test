@@ -37,14 +37,6 @@
       "matchDatasources": ["terraform-provider"]
     },
     {
-      "groupName": "Terraform version",
-      "labels": ["terraform", "required-version"],
-      "additionalBranchPrefix": "tf-version-",
-      "matchManagers": ["terraform"],
-      "matchDepTypes": ["required_version"],
-      "matchDatasources": ["github-releases"]
-    },
-    {
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-module"],
       "matchPackageNames": ["Azure/avm-utl-regions/azurerm"],
@@ -62,12 +54,14 @@
       "groupName": "Terraform modules"
     },
     {
-      "matchManagers": ["terraform-version"],
+      "matchManagers": ["terraform-version", "terraform"],
       "matchDepNames": ["hashicorp/terraform"],
       "allowedVersions": "~> 1.12.0",
-      "rangeStrategy": "pin",
       "enabled": true,
-      "groupName": "Terraform version"
+      "labels": ["terraform", "required-version"],
+      "additionalBranchPrefix": "tf-version-",
+      "matchDepTypes": ["required_version"],
+      "matchDatasources": ["github-releases", "terraform-version"]
     },
     {
       "matchManagers": ["terraform"],
