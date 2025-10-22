@@ -6,7 +6,6 @@
   "semanticCommitScope": "deps",
   "schedule": ["at any time"],
   "rebaseWhen": "conflicted",
-  "minimumReleaseAge": "3 days",
   "labels": ["dependencies", "renovate"],
   "prHourlyLimit": 100,
   "recreateClosed": true,
