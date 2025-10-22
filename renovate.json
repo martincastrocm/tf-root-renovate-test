@@ -2,8 +2,6 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended"],
   "dependencyDashboard": true,
-  "dependencyDashboardApproval": false,
-  "dependencyDashboardAutoclose": true,
   "semanticCommits": "enabled",
   "semanticCommitScope": "deps",
   "schedule": ["at any time"],
@@ -47,7 +45,6 @@
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-module"],
       "matchPackageNames": ["Azure/avm-utl-regions/azurerm"],
-      "allowedVersions": "0.6.0",
       "enabled": true,
       "groupName": "Terraform modules"
     },
@@ -61,10 +58,16 @@
       "groupName": "Terraform modules"
     },
     {
+      "matchManagers": ["terraform"],
+      "matchDatasources": ["github-tags"],
+      "matchPackageNames": ["martincastrocm/tf-module-renovate-test-2"],
+      "enabled": true,
+      "groupName": "Terraform modules"
+    },
+    {
       "matchManagers": ["terraform-version", "terraform"],
       "matchDatasources": ["github-releases", "terraform-version"],
       "matchDepNames": ["hashicorp/terraform"],
-      "allowedVersions": "~> 1.12.0",
       "enabled": true,
       "groupName": "Terraform version"
     },
@@ -72,7 +75,6 @@
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["hashicorp/azurerm"],
-      "allowedVersions": "~> 4.31.0",
       "enabled": true,
       "groupName": "Terraform providers"
     },
@@ -80,7 +82,6 @@
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["Azure/azapi"],
-      "allowedVersions": "~> 2.6.0",
       "enabled": true,
       "groupName": "Terraform providers"
     },
@@ -88,7 +89,6 @@
       "matchManagers": ["terraform"],
       "matchDatasources": ["terraform-provider"],
       "matchPackageNames": ["hashicorp/azuread"],
-      "allowedVersions": "~> 3.3.0",
       "enabled": true,
       "groupName": "Terraform providers"
     }
