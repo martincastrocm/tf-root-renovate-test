@@ -1,5 +1,5 @@
 module "common" {
-  source = "git@github.com:martincastrocm/tf-module-renovate-test.git?ref=v0.1.0"
+  source = "git@github.com:martincastrocm/tf-module-renovate-test.git?ref=v0.2.0"
 }
 
 module "commo2" {
@@ -9,11 +9,11 @@ module "commo2" {
 
 module "avm_utl_regions" {
   source  = "Azure/avm-utl-regions/azurerm"
-  version = "0.5.0"
+  version = "0.11.0"
 }
 
 terraform {
-  required_version = "~> 1.12.0"
+  required_version = "~> 1.14.0"
 
   required_providers {
     azurerm = {
